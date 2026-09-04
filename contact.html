@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Bear Learning Center | Contact and Enrollment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Big Bear Learning Center</h1>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="services.html">Programs</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact and Enrollment</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Contact and Enrollment Request</h2>
+            <p>Use this form to ask a question or request information about enrollment.</p>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Parent or Guardian Information</legend>
+
+                    <label for="parent-name">Full Name:</label>
+                    <input type="text" id="parent-name" name="parent-name" required minlength="2">
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-555-5555">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Child and Enrollment Information</legend>
+
+                    <label for="child-age">Child's Age:</label>
+                    <input type="number" id="child-age" name="child-age" min="1" max="12" required>
+
+                    <label for="start-date">Preferred Start Date:</label>
+                    <input type="date" id="start-date" name="start-date" required>
+
+                    <label for="program">Program Interest:</label>
+                    <select id="program" name="program" required>
+                        <option value="">Select a program</option>
+                        <option value="full-day">Full-Day Care</option>
+                        <option value="part-day">Part-Day Care</option>
+                        <option value="after-school">After-School Care</option>
+                    </select>
+
+                    <label for="message">Questions or Additional Information:</label>
+                    <textarea id="message" name="message" rows="5" maxlength="500"></textarea>
+                </fieldset>
+
+                <button type="submit">Send Enrollment Request</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Big Bear Learning Center. All rights reserved.</p>
+    </footer>
+</body>
+</html>
