@@ -22,18 +22,22 @@
             <h2>Contact and Enrollment Request</h2>
             <p>Use this form to ask a question or request information about enrollment.</p>
 
-            <form action="#" method="post">
+            <div class="interactive-tool"><h3>Explore a Care Option</h3><label for="care-choice">Choose a program to preview:</label><select id="care-choice"><option value="">Choose a program</option><option value="full-day">Full-Day Care</option><option value="part-day">Part-Day Care</option><option value="after-school">After-School Care</option></select><button id="show-program" type="button">Show Program Details</button><p id="program-result" role="status">Select a program to see its details.</p><p id="saved-choice"></p></div>
+<form id="enrollment-form" novalidate action="#" method="post">
                 <fieldset>
                     <legend>Parent or Guardian Information</legend>
 
                     <label for="parent-name">Full Name:</label>
                     <input type="text" id="parent-name" name="parent-name" required minlength="2">
+<span class="field-error" id="parent-name-error" aria-live="polite"></span>
 
                     <label for="email">Email Address:</label>
                     <input type="email" id="email" name="email" required>
+<span class="field-error" id="email-error" aria-live="polite"></span>
 
                     <label for="phone">Phone Number:</label>
                     <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-555-5555">
+<span class="field-error" id="phone-error" aria-live="polite"></span>
                 </fieldset>
 
                 <fieldset>
@@ -41,12 +45,15 @@
 
                     <label for="child-age">Child's Age:</label>
                     <input type="number" id="child-age" name="child-age" min="1" max="12" required>
+<span class="field-error" id="child-age-error" aria-live="polite"></span>
 
                     <label for="start-date">Preferred Start Date:</label>
                     <input type="date" id="start-date" name="start-date" required>
+<span class="field-error" id="start-date-error" aria-live="polite"></span>
 
                     <label for="program">Program Interest:</label>
                     <select id="program" name="program" required>
+<span class="field-error" id="program-error" aria-live="polite"></span>
                         <option value="">Select a program</option>
                         <option value="full-day">Full-Day Care</option>
                         <option value="part-day">Part-Day Care</option>
@@ -58,12 +65,12 @@
                 </fieldset>
 
                 <button type="submit">Send Enrollment Request</button>
-            </form>
+            <p id="form-status" role="status"></p><p class="privacy-note">Demo only: no enrollment request is sent. Your selected program is remembered on this device.</p></form>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Big Bear Learning Center. All rights reserved.</p>
     </footer>
-</body>
+<script src="script.js" defer></script></body>
 </html>
