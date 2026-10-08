@@ -23,3 +23,11 @@ footer { background:var(--charcoal); color:var(--cream); text-align:center; padd
  header { padding:1rem; } nav { flex-direction:column; } nav a { padding-left:0; }
  main { width:94%; margin:1rem auto; } section { padding:1rem; } .program-grid { flex-direction:column; }
 }
+
+/* Touchstone 4 interactive controls */
+.interactive-tool{border:2px solid #D88C5A;border-radius:10px;padding:1rem;margin:1rem 0 1.5rem;background:#FFF8F0}
+.interactive-tool select,.interactive-tool button{margin:.5rem .5rem .5rem 0}
+#program-result{font-weight:bold;color:#6B3E26}
+.field-error{display:block;color:#9b2020;font-size:.92rem;margin:.2rem 0 .7rem}
+[aria-invalid="true"]{outline:2px solid #9b2020;outline-offset:2px}
+#form-status{font-weight:bold}.privacy-note{font-size:.9rem}
